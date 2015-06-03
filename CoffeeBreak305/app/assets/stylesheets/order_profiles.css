@@ -1,0 +1,12 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.order-profile{
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  height: 100vh;
+  overflow: hidden;
+}

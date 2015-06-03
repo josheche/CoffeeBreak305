@@ -1,0 +1,37 @@
+<%= simple_form_for @order, html: { id: :orderform } do |f| %>
+  <%= f.error_notification %>
+  <div class="form-inputs">
+  <%= hidden_field_tag(:stripeToken) %>
+  <%= hidden_field_tag(:stripeEmail) %>
+    <div align="center">
+    <div class="container">
+        <%= f.input :order_profile_id, :input_html => {:id => "selected_profile_id", :value => "", :class => "hidden"} %>
+      <!-- big button logo begins -->
+      <div class="form-actions" id="submitorder">
+        <%= image_submit_tag("button-logo.svg", class: "bigbutton", id: "submitorder") %>
+      </div>
+    </div>
+
+      <!-- big button logo ends -->
+      <div class="dropup pull-left dropup-pad">
+        <a class="dropup-toggle rowling" data-toggle="dropdown">
+          Order Profiles<span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <% @order_profiles.each do |o| %>
+          <li>
+            <a class="selected_product" tabindex="-1">
+              <%= o['name'] %>
+            </a>
+          </li>
+          <li style="visibility:hidden"><%= o['id'] %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <p id="notice"><%= notice %></p>
+
+
+
+  </div>
+<% end %>
