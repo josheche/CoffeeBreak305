@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<br><br><br>
+
+
+<!--Temporarily styling for visual ease -->
+<style type="text/css">
+  table {
+    margin: 15px;
+  }
+  td {
+    padding-left: 20px;
+  }
+</style>
+
+
+<table>
+  <tr>
+    <td>Profile Name</td>
+    <td>Phone Number</td>
+    <td>Delivery Address</td>
+    <td>Business</td>
+    <td>Product</td>
+  </tr>
+  <tr>
+    <td><%=@order_profile.name %></td>
+    <td><%=@order_profile.phone %></td>
+    <td><%=@order_profile.address_for_delivery %></td>
+    <td><%=@order_profile.business.name %></td>
+    <td><%=@order_profile.product.name %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_order_profile_path(@order_profile) %> |
+<%= link_to 'Back', order_profiles_path %>
