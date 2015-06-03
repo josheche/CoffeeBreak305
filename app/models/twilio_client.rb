@@ -5,7 +5,8 @@ class TwilioClient
     number_to_send_to = runner.phone
 
     if Rails.env.test? || Rails.env.development?
-      twilio_num = "3054400524"
+      twilio_num = "7862071900"
+      # twilio_num = "3054400524"
     else
       twilio_num = ENV['TWILIO_NUM']
     end
