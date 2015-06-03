@@ -1,0 +1,287 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+.quote-container {
+  position: relative;
+}
+.red{
+  color: #c0392b;
+}
+.yellow {
+  background: #eae672;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.pin {
+  background-color: #aaa;
+  display: block;
+  height: 32px;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  z-index: 1;
+}
+.pin:after {
+  background-color: #A31;
+  background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+              inset 3px 3px 3px hsla(0,0%,100%,.2),
+              inset -3px -3px 3px hsla(0,0%,0%,.2),
+              23px 20px 3px hsla(0,0%,0%,.15);
+  content: '';
+  height: 12px;
+  left: -5px;
+  position: absolute;
+  top: -10px;
+  width: 12px;
+}
+.pin:before {
+  background-color: hsla(0,0%,0%,0.1);
+  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+  content: '';
+
+  height: 24px;
+  width: 2px;
+  left: 0;
+  position: absolute;
+  top: 8px;
+
+  transform: rotate(57.5deg);
+  -moz-transform: rotate(57.5deg);
+  -webkit-transform: rotate(57.5deg);
+  -o-transform: rotate(57.5deg);
+  -ms-transform: rotate(57.5deg);
+
+  transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+}
+.note {
+  color: #333;
+  position: relative;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  font-family: Raleway;
+  font-size: 30px;
+  box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+  text-align: center;
+}
+.note .author {
+  font-family: Cookie;
+  display: block;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+blockquote {
+  border-left: none;
+}
+blockquote p {
+  color: #fcfc95;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.divider{
+  border-top: 1px solid #333333;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+}
+.divider-bottom{
+  border-top: 1px solid #333333;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.resize {
+  display: block;
+  transform: scale(0.3, 0.3);
+  -ms-transform: scale(0.3, 0.3);
+  -webkit-transform: scale(0.3, 0.3);
+}
+.jumbotron-welcome {
+  background-color: #333333;
+  color: #EEEEEE;
+  min-height: 700px;
+  background-image: url("outside-panther.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right top;
+}
+.coffeebreak {
+  padding-top: 18%;
+  color: #fcfc95;
+  font-family: 'Cookie', cursive;
+}
+.logo-small {
+  font-family: 'Cookie', cursive;
+}
+.jumbotron-welcome h1 {
+  font-size: 15vw;
+}
+h1:hover {
+  color: #fcfc95;
+}
+.jumbotron-welcome p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3.8vw;
+}
+.well {
+  background-color: #fcfc95;
+  border: none;
+  max-width: 400px;
+  max-width:390px;
+  color: #5c4c40;
+  text-align: center;
+  border-left: 5px solid #897860;
+  padding-left: 5px;
+  margin:0 auto;
+  width:auto;
+  display:table
+}
+.cookie {
+  font-family: 'Cookie', cursive;
+  font-size: 1.5em;
+  color: #fcfc95;
+}
+.instructions {
+  color: #EEEEEE;
+  font-size: 1.5em;
+}
+#how-it-works-row {
+  position: relative;
+  z-index: 300;
+}
+.lander-row {
+  display: block;
+}
+.circle {
+  border-radius: 50%;
+}
+#how-it-works-row .circle-number {
+  background: #000;
+  color: #eeeeee;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  height: auto;
+}
+#how-it-works-row .how-it-works-phone {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reup {
+ position: absolute;
+ top: -120px;
+ max-width: 100px;
+ padding-right: 20px;
+ right: 0;
+}
+.reup-about {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.jumbotron-about-us {
+  background-color: #333333;
+  color: #EEEEEE;
+  min-height: 800px;
+  background-image: url("about-banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center top;
+}
+#about-us-row {
+  position: relative;
+  z-index: 300;
+}
+.lander-row-2 {
+  display: block;
+}
+#about-us {
+  margin-right: -15px;
+  padding-top: 160px;
+  margin-left: -15px;
+  padding-bottom: 150px;
+}
+#about-us-row .profile-img {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.transparent-bg {
+  background-color: rgba(20, 20, 20, 0.5);
+  margin-top: 40px;
+}
+#banner a:link {
+  text-decoration: none;
+}
+.description {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: .8;
+  font-size: 28px;
+  max-width: 500px;
+}
+.wyncode {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 5em;
+  text-align: center;
+  background-image: url(wyncode.jpg);
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(0,0,0,0);
+}
+.resize-big {
+  transform: scale(0.6, 0.6);
+  -ms-transform: scale(0.6, 0.6);
+  -webkit-transform: scale(0.6, 0.6);
+}
+.divider-top {
+  margin-top: 40px;
+}
+.bottom-buffer{
+  margin-bottom: 40px;
+}

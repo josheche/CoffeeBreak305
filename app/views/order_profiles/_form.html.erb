@@ -1,0 +1,85 @@
+<div class="text-center">
+  <%= simple_form_for(@order_profile) do |f| %>
+
+    <!-- error check -->
+    <% if @order_profile.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@order_profile.errors.count, "error") %> prohibited this order_profile from being saved:</h2>
+        <ul>
+        <% @order_profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <!-- end error check -->
+
+  <%= f.input :name %>
+  <%= f.input :phone %>
+  <%= f.input :address_for_delivery %>
+
+
+  <!-- business and product select -->
+  <div>
+    <% @businesses.each do |b| %>
+      <table class="table table-striped table-bordered">
+        <tbody>
+          <tr class="rowlink">
+            <td>
+              <!-- display all business options -->
+              <div class="dropdown">
+                <a class="dropdown-toggle rowling" data-toggle="dropdown">
+                  <!-- business names -->
+                  <%=b['name']%>
+                </a>
+                <!-- end business option display -->
+
+                <!-- display all products of a selected business as dropdown -->
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <% @products.each do |p| %>
+                  <% if p['business_id'] == b['id'] %>
+                    <li>
+                      <a class="selected_product" tabindex="-1">
+
+                        <!-- product name -->
+                        <%= p['name'] %>
+
+                        <!-- product cost -->
+                        <div class="product-cost">
+                          <%= "$" %>
+                          <%= number_with_precision(((p['cost_in_pennies'].to_i)/100.0), :precision => 2) %>
+                        </div>
+                        <!-- end product cost -->
+
+                      </a>
+                    </li>
+
+                    <!-- invisible field used to pass selected product id to input :product_id below -->
+                    <li style="visibility:hidden"><%= p['id'] %></li>
+
+                  <%end%>
+                <%end%>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    <%end%>
+  </div>
+
+  <!-- invisible field to pass selected product id to order profile -->
+  <%= f.input :product_id, :as => :hidden, :input_html => { :id => "test", :value => ""}%>
+
+  <!-- submit button  -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <!-- price explanation div (appears on hover of price in product list above) -->
+  <div id="price-explanation">
+    <%= "total cost = product price + 10% + tax" %>
+  </div>
+
+  <% end %>
+</div>
