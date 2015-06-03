@@ -14,9 +14,9 @@
 
       <!-- big button logo ends -->
       <div class="dropup pull-left dropup-pad">
-        <a class="dropup-toggle rowling" data-toggle="dropdown">
+        <button class="dropup-toggle rowling" data-toggle="dropdown">
           Order Profiles<span class="caret"></span>
-        </a>
+        </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
           <% @order_profiles.each do |o| %>
           <li>
@@ -30,7 +30,6 @@
       </div>
     </div>
     <p id="notice"><%= notice %></p>
-
 
 
   </div>
