@@ -166,3 +166,11 @@ body {
 .dropup-pad{
   margin-left: 20px;
 }
+.settings-img {
+  width: 40px;
+  height: auto;
+  color: #eeeeee;
+}
+.nodecor{
+  text-decoration: none;
+}

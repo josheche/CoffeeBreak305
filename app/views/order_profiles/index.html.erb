@@ -1,8 +1,8 @@
 <div class="order-profile">
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Order Profiles</h1>
-
+  <h1 class="text-center text-uppercase">Order Profiles</h1>
+<div class="">
   <table>
     <thead>
       <tr>
@@ -11,6 +11,7 @@
     </thead>
     <tbody>
         <tr>
+        <b>
           <td>Name</td>
           <td>Product</td>
           <td>Business</td>
@@ -28,6 +29,7 @@
       <% end %>
     </tbody>
   </table>
+</div>
 
   <%= link_to 'New Order Profile', new_order_profile_path %>
 </div>
