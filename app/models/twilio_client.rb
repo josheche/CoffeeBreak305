@@ -11,7 +11,7 @@ class TwilioClient
       twilio_num = ENV['TWILIO_NUM']
     end
 
-    @client = Twilio::REST::Client.new
+    @client = Twilio::REST::Client.new(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN'])
     @client.account.messages.create({
       :from => "+1#{twilio_num}",
       :to => '3058048507',
