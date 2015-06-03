@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get "specialization_types/:specialization_type_id/specializations" => "application#specializations", :as => "specializations", :format => :json
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations"}
 
   resources :charges
 

@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
         @client.account.messages.create({
           :from => "+1#{twilio_num}",
           :to => '3058048507',
-          :body => 'Yo go get coffe',
+          :body => 'Yo go get coffee',
         })
 
         format.html { redirect_to root_path, notice: 'Order was successfully created.' }

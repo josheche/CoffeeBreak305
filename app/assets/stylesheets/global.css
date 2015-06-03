@@ -163,3 +163,6 @@ body {
   border: 2px solid #333333;
   border-radius: 10px;
 }
+.dropup-pad{
+  margin-left: 20px;
+}
