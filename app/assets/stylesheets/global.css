@@ -8,6 +8,12 @@ body {
   background: linear-gradient(to bottom, #b79c7b 0%, #877464 76%, #877464 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b79c7b', endColorstr='#877464', GradientType=0 );
 }
+.flash{
+  background: #eeeeee;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding: 15px;
+}
 /*COMMENTED OUT TO USE REGULAR
   NOTICE AND ALERT MESSAGE
   ON APPLICATION LAYOUT
@@ -164,7 +170,7 @@ body {
   border-radius: 10px;
 }
 .dropup-pad{
-  margin-left: 20px;
+  margin-left: 92px;
 }
 .settings-img {
   width: 40px;
