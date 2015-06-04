@@ -128,7 +128,7 @@ img {
   background-image: url("outside-panther.png");
   background-size: cover;
   background-attachment: fixed;
-  background-position: right top;
+  background-position: center;
   height: auto;
 }
 .coffeebreak {
