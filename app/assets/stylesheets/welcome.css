@@ -125,11 +125,11 @@ img {
 .jumbotron-welcome {
   background-color: #333333;
   color: #EEEEEE;
-  min-height: 700px;
   background-image: url("outside-panther.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: right top;
+  height: auto;
 }
 .coffeebreak {
   padding-top: 18%;
