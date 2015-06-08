@@ -5,7 +5,7 @@
   <%= hidden_field_tag(:stripeEmail) %>
     <div align="center">
       <div class="container">
-          <%= f.input :order_profile_id, :input_html => {:id => "selected_profile_id", :value => "", :class => "hidden"} %>
+          <%= f.input :order_profile_id, :input_html => {:id => "selected_profile_id", :value => "", :class => "hidden order_profile_id_hit"} %>
         <!-- big button logo begins -->
         <div class="form-actions" id="submitorder">
           <%= image_submit_tag("button-logo.svg", class: "bigbutton", id: "submitorder") %>
@@ -19,9 +19,9 @@
         <button type="button" class="btn btn-default">Order Profiles</button>
         <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle"><span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <% @order_profiles.each do |o| %>
-          <li><a class="selected_product" tabindex="-1"><%= o['name'] %></a></li>
-          <li style="visibility:hidden"><%= o['id'] %></li>
+          <% current_user.order_profiles.each do |o| %>
+            <li><a class="selected_product cojeme_aqui" data-profile="<%= o['id'] %>" tabindex="-1"><%= o['name'] %></a></li>
+            <li style="visibility:hidden"><%= o['id'] %></li>
           <% end %>
           <li role="presentation" class="divider"></li>
           <li><a href="/order_profiles">Create New Order Profile</a></li>

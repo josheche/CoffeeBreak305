@@ -26,6 +26,11 @@ var main = function(){
     $('#test').val(selected_prod_id);
   });
 
+  $('.cojeme_aqui').click(function(){
+    var profile_id = $(this).attr("data-profile");
+    $('.order_profile_id_hit').val(profile_id);
+  });
+
 };
 
 $(document).ready(main);

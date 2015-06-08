@@ -36,11 +36,13 @@ class OrdersController < ApplicationController
           twilio_num = ENV['TWILIO_NUM']
         end
 
+        @profile = OrderProfile.find(params['order']['order_profile_id'])
+
         @client = Twilio::REST::Client.new(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN'])
         @client.account.messages.create({
           :from => "+1#{twilio_num}",
           :to => '3058048507',
-          :body => 'Yo! Go get some coffee: 16 oz latte, headed to The LAB , you\'ll be calling 3055048507'
+          :body => "Hey, your getting a #{@profile.product.name}, #{@profile.product.size} for #{@profile.name} - #{@profile.phone} at #{@profile.address_for_delivery}"
         })
 
         format.html { redirect_to root_path, notice: 'Order was successfully created.' }
