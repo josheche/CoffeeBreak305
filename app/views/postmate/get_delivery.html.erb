@@ -2,9 +2,10 @@
 <p>Find me in app/views/postmate/get_delivery.html.erb</p>
 
 
+<br><br><br><br>
 <div class="container">
-  <%= form_tag url_for(:controller => 'postmates', :action => 'get_delivery'), :method => 'post' do %>
-  <%= submit_tag "Get Delivery", :action => 'get_delivery', :controller => 'postmates'%>
+  <%= form_tag url_for(:controller => 'postmate', :action => 'get_delivery'), :method => 'post' do %>
+  <%= submit_tag "Get Delivery", :action => 'get_delivery', :controller => 'postmate', class: 'btn-lg' %>
   <% end %>
 </div>
 
