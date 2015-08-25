@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'postmate/get_delivery'
+
   resources :orders
   get 'home/index'
 

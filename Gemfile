@@ -63,3 +63,5 @@ group :development, :test do
 end
 
   gem 'twilio-ruby'
+
+  gem 'httparty'
